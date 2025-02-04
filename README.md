@@ -1,2 +1,2 @@
 # MailsApp
-Mails App created with javascript and Notion API
+Fullstack Mails App created with javascript and Notion API
