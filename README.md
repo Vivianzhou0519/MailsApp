@@ -1,5 +1,4 @@
 # MailsApp
-### README
 
 #### Description of the program and additional improvements selected
 
@@ -7,11 +6,9 @@ The program is a simple mail application that supports sending, reading, and del
 
 1. Send mail to a designated user as a specified sender.
 2. Read mail for a given recipient.
-3. Delete mail by message ID.
 
 Additionally, these features:
 
-- Added timestamps to each of the messages to indicate when the message was sent.
 - Added functionality to delete messages.
 - Added better error handling and user input validation for a smoother user experience.
 
@@ -24,7 +21,7 @@ Additionally, these features:
 
 2. **Navigate into the project directory:**
     ```bash
-    cd notion-mail-app
+    cd MailsApp
     ```
 
 3. **Install dependencies:**
@@ -36,8 +33,8 @@ Additionally, these features:
 
    Create a `.env` file in the root directory and add your Notion API credentials:
     ```
-    NOTION_KEY=<your_notion_integration_token>
-    NOTION_DATABASE_ID=<your_database_id>
+    NOTION_KEY=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
+    NOTION_DATABASE_ID=190dda4764cf80a99b45c9c549d9ed9b
     ```
 
 5. **Run the program:**
@@ -49,10 +46,13 @@ Additionally, these features:
 
 #### List of references to sources you relied on
 
-- [Node.js readline docs](https://nodejs.org/api/readline.html)
-- [Notion API reference](https://developers.notion.com/reference/intro)
-- [StackOverflow: How to build a CLI tool with Node.js](https://stackoverflow.com/questions/47451173/how-to-build-a-command-line-tool-with-nodejs)
-
+- [Notion Build Your First API] https://developers.notion.com/docs/create-a-notion-integration#getting-started
+- [Notion Authroization] https://developers.notion.com/docs/authorization
+- [Notion Create a database] https://developers.notion.com/reference/create-a-database
+- [Notion intro to database] https://www.notion.com/help/intro-to-databasesa
+- [Node js tutorial] https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
+- [Command line interface and node js] https://medium.com/@manavshrivastava/lets-build-a-cli-command-line-interface-with-node-js-d3b5faacc5ea
+  
 #### Future improvements
 
 1. **User Authentication:** Implement user authentication to restrict access to authorized users.
@@ -60,6 +60,23 @@ Additionally, these features:
 3. **Message Search:** Add the capability to search messages by keywords.
 4. **Improve User Interface:** Enhance the CLI experience using libraries like `inquirer.js` to provide a more user-friendly interface.
 5. **Deployment:** Containerize the application using Docker for easier deployment and scalability.
+
+
+### Future Improvements
+
+**1. Message Editing: Allow Users to Edit Messages After Sending**
+- **Steps:** Develop an editing endpoint, ensure only the message author or admin can edit, and modify the database to include `edited_at` and `edit_history` fields. Update the CLI to include editing options.
+- **Key Considerations:** Maintain transparency by keeping an edit history and clearly indicate edited messages to users.
+
+**2. Message Search: Add Keyword-Based Search Capability**
+- **Steps:** Implement full-text search indexing on messages, develop a search endpoint, and integrate a search feature in the CLI.
+- **Key Considerations:** Optimize for case-insensitivity and partial matches, and sanitize search inputs for security.
+
+**3. Improve User Interface: Enhance CLI with `inquirer.js`**
+- **Steps:** Integrate `inquirer.js` to replace basic inputs with interactive prompts. Structure user workflows logically and enhance usability.
+- **Key Considerations:** Ensure accessibility and gather user feedback to improve interaction.
+
+These improvements aim to make the MailsApp more user-friendly and scalable, facilitating better management and user experiences.
 
 #### Product or technical choices made and why
 
